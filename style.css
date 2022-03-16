@@ -1,0 +1,67 @@
+/*
+Theme Name: Purlplebug
+Author: Vegibit
+Author URI: https://vegibit.com
+Version: 1.0
+ */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #545454;
+}
+
+.top-header {
+  background-color: #333;
+  padding: 15px;
+}
+
+.top-header .col-md-8 p {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.top-header .col-md-8 button {
+  background: #f7af11;
+  color: #fff;
+  padding: 5px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.top-header .col-md-8 i {
+  background: #fff;
+  padding: 5px;
+  margin: 5px;
+  color: #333;
+}
+
+.second-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-header .blog-info {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.second-header p {
+  margin-top: -10px;
+  color: #333;
+  text-transform: lowercase;
+}
+
+.add-to-menu {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+#carouselExampleControls .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 300px;
+}
+/*# sourceMappingURL=style.css.map */
