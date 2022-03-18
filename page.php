@@ -15,6 +15,6 @@ else :
 
 endif;
 
-// get_footer();
+get_footer();
 
 ?>

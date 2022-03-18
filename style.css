@@ -1,13 +1,14 @@
 /*
-Theme Name: Purlplebug
-Author: Vegibit
-Author URI: https://vegibit.com
-Version: 1.0
- */
+*Theme Name: Purlplebug
+*Author: Vegibit
+*Author URI: https://vegibit.com
+*Version: 1.0
+*/
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   color: #545454;
+  background-color: #eee;
 }
 
 .top-header {
@@ -63,5 +64,246 @@ body {
 #carouselExampleControls .carousel-inner .carousel-item img {
   width: 100%;
   height: 300px;
+}
+
+.page-element-id-a1 {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.page-element-id-a1 h3 {
+  color: #c71313;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.page-element-id-a1 .dynnamic-page-content-a1 {
+  padding: 10px;
+}
+
+.page-element-id-a1 .dynnamic-page-content-a1 h3 {
+  padding: 0;
+}
+
+.divider-md {
+  border: 1px solid #c71313;
+}
+
+.sb-text {
+  color: #333 !important;
+}
+
+.site-footer .footer-svg {
+  width: 1040px;
+}
+
+@media screen and (max-width: 768px) {
+  .site-footer .footer-svg {
+    width: 768px;
+  }
+}
+
+.main-content .container .calendar {
+  background-color: #fff;
+  padding: 10px !important;
+}
+
+.main-content .container .calendar #wp-calendar caption {
+  text-align: right;
+}
+
+.main-content .container .calendar #wp-calendar thead tr th {
+  text-align: center;
+}
+
+.main-content .container .calendar #wp-calendar tbody tr td {
+  background: #eee;
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+.main-content .container .calendar #wp-calendar tbody tr #today {
+  background-color: #f7af11;
+}
+
+.main-content .container .calendar #wp-calendar tbody tr #today a {
+  color: #fff;
+}
+
+.main-content .container .card {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.main-content .container .card .img-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main-content .container .card img {
+  height: 300px;
+  width: 100%;
+}
+
+.main-content .container .card .category-btn {
+  background: #f7af11;
+  color: #fff;
+  padding: 5px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+}
+
+.main-content .container .card hr {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.main-content .container .card .blue-divider {
+  border: 1px solid #2fabbf !important;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.main-content .container .card .red-divider {
+  border: 1px solid #c81515 !important;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.main-content .container .search-form-holder {
+  background: #fff;
+  padding: 10px;
+}
+
+.main-content .container .card .card-title {
+  font-size: 1.2rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.main-content .container .card .blue {
+  color: #2fabbf;
+}
+
+.main-content .container .card .red {
+  color: #c81515;
+}
+
+#searchform div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#searchform div:nth-child(1) #s {
+  width: 100%;
+}
+
+#searchform div:nth-child(1) #searchsubmit {
+  background: #c81515;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.recent-post-card li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recent-post-card li h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.recent-post-card li p {
+  margin: 0;
+}
+
+.archives-page li {
+  list-style: none;
+}
+
+.archives-page li a {
+  color: #333;
+}
+
+.archives-page li:before {
+  content: '\00BB';
+  margin-right: 10px;
+}
+
+.custom_categories_widget li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom_categories_widget li p {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.custom_categories_widget li p a {
+  color: #333;
+}
+
+.archives-page li a {
+  text-transform: capitalize;
+}
+
+.add-to-menu-1 .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.add-to-menu-1 .menu ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.add-to-menu-1 .menu ul li a {
+  color: #fff;
+}
+
+.add-to-menu-2 .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.add-to-menu-2 .menu ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.add-to-menu-2 .menu ul li a {
+  color: #333;
 }
 /*# sourceMappingURL=style.css.map */
