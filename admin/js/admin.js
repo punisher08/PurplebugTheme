@@ -1,4 +1,5 @@
-jQuery(function($){
+jQuery(document).ready(function($){
+    $('.purplebug_colorpicker').wpColorPicker();
     $('body').on('click', '.aw_upload_image_button', function(e){
         e.preventDefault();
         aw_uploader = wp.media({
@@ -72,3 +73,6 @@ jQuery(function($){
         .open();
     });
 });
+
+
+    

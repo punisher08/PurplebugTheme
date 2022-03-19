@@ -33,7 +33,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
 <div class="main-content mt-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 card">
+            <div class="col-md-6 col-sm-12 card">
             <?php 
                 $paged = get_query_var('paged')? get_query_var('paged') : 1;
                 $args = [
@@ -47,8 +47,8 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                 $post_id = get_the_ID();
                 $featured_image = get_post_meta($post_id,'aw_custom_image5',true);
                 ?>
-                    <div class="img-content">
-                        <h3><?=$post->post_title;?></h3>
+                    <div class="img-content mt-3">
+                        <h3 class="card-title"><?=$post->post_title;?></h3>
                         <hr class="divider-md">
                         <img class="single-page-ida2 my-3" src="<?php echo $featured_image;?>">
                         <?php
@@ -67,8 +67,8 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                 
                 
             </div>
-            <div class="col-md-7 d-flex">
-                <div class="col-md-6">
+            <div class="col-md-6 col-sm-12 d-flex cat-content">
+                <div class="col-md-6 col-sm-12">
                     <div class="search-form-holder mb-3">
                         <?php  get_search_form(); ?>
                     </div>
@@ -104,7 +104,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     <?php get_calendar() ?>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-title pt-2 red">Archives</div>
                         <hr class="red-divider">

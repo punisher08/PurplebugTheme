@@ -17,14 +17,14 @@
 <body <?php body_class(); ?>>
     <header class="site-header">
         <div class="top-header row">
-          <div class="container d-flex">
-           <div class="col-md-8 d-flex align-items-center text-white">
+          <div class="container d-flex top-bar-link">
+           <div class="col-md-7 d-flex align-items-center text-white header">
                 <button>Headline</button>
                 <i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i>
                 <p class="mx-3">NON SIMELIQUE TEMPORA</p>
-                <p class="mx-3">VERITATIS NATUS VOLUPTATEM</p>
+                <p class="mx-3 d-sm-none">VERITATIS NATUS VOLUPTATEM</p>
            </div>
-           <div class="col-lg-4 d-flex align-items-center text-white">
+           <div class="col-lg-5 d-flex align-items-center text-white">
                 <div class="add-to-menu-1"><?php wp_nav_menu( array( 'theme_location' => 'new-menu' ) ); ?></div>
            </div>
         </div>

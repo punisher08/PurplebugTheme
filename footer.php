@@ -5,12 +5,12 @@
 </svg> -->
 </footer>
 <div class="top-header row">
-          <div class="container d-flex">
-           <div class="col-md-8 d-flex align-items-center text-white">
+          <div class="container d-flex footer-mobile">
+           <div class="col-md-6 d-flex align-items-center text-white">
                 <p class="mx-3">@2018 QQBLOGS THEME BY WEBDEVZAP. ALL RIGHT RESERVED.</p>
            </div>
-           <div class="col-lg-4 d-flex align-items-center text-white">
-                <div class="add-to-menu">ADD A MENU</div>
+           <div class="col-lg-6 d-flex align-items-center text-white footer-links">
+           <div class="add-to-menu-1"><?php wp_nav_menu( array( 'theme_location' => 'new-menu' ) ); ?></div>
            </div>
         </div>
         </div>

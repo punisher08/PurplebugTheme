@@ -38,16 +38,6 @@ function register_my_menu() {
 add_action( 'init', 'register_my_menu' );
 // metabox
 
-function admin_enqueue() {
-  
-    if ( ! did_action( 'wp_enqueue_media' ) ) {
-        wp_enqueue_media();
-    }
-  
-    wp_enqueue_script( 'awscript', get_stylesheet_directory_uri() . '/admin/js/admin.js', array('jquery'), null, false );
-}
-add_action( 'admin_enqueue_scripts', 'admin_enqueue' );
-
 // carrousel image 1
 function carousel_image1_save($post_id)
 {

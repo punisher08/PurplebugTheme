@@ -10,12 +10,13 @@
     font-size: 16px;
     color: #545454;
     background-color: #eee;
+    overflow-x: hidden;
 }
 .top-header{
     background-color: #333;
     padding: 15px;
     // margin: -10px;
-    .col-md-8{
+    .header{
         p{
             font-size: 0.7rem;
             margin:0;
@@ -175,12 +176,7 @@
                 margin-bottom: 0;
                 text-transform: uppercase;
             }
-            .blue{
-                color: #2fabbf;
-            }
-            .red{
-                color: #c81515;
-            }
+            
         }
     }
 }
@@ -188,7 +184,7 @@
 #searchform{
     div:nth-child(1){
         display: flex;
-        #s{
+        #s{  
             width: 100%;
         }
         #searchsubmit{
@@ -261,9 +257,6 @@
                 margin-left: 20px;
                 font-size: 1rem;
                 text-transform: uppercase; 
-                a{
-                    color: #fff;
-                }
             }
         }
     }
@@ -280,6 +273,53 @@
                 text-transform: uppercase; 
                 a{
                     color: #333;
+                }
+            }
+        }
+    }
+}
+
+.top-bar-link{
+    @media screen and (max-width:768px) {
+        display:unset !important;
+    }
+}
+
+.menu{
+    ul{
+        @media screen and (max-width:768px) {
+            display:none !important;
+        }
+    }
+}
+.cat-content{
+    @media screen and (max-width:768px) {
+        display:unset !important;
+    }
+}
+.d-sm-none{
+    @media screen and (max-width:768px) {
+        display:none !important;
+    }
+}
+.footer-mobile{
+    @media screen and (max-width:768px) {
+        display:unset !important;
+    }
+    p{
+        @media screen and (max-width:768px) {
+            margin:0 !important;
+        }
+    }
+}
+.footer-links{
+    .add-to-menu-1{
+        .menu{
+            ul{
+                
+                @media screen and (max-width:768px) {
+                    display: grid !important;
+                    padding: 0px !important;
                 }
             }
         }
