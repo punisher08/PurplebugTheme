@@ -11,7 +11,6 @@ if( !defined('PURPLEBUG_BASE_VERSION') ) { define('PURPLEBUG_BASE_VERSION', '1.0
 
 function custom_theme_assets() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-    // wp_register_style( 'custom-style', PURPLEBUG_BASE.'/frontend/custom-styles.css',array(), '1', 'all' );
     $styles_settings = include( PURPLEBUG_BASE . '/frontend/frontend-style.php' );
 	wp_add_inline_style( 'style', $styles_settings );
     wp_enqueue_style( 'style' );
@@ -34,13 +33,46 @@ function admin_enqueue() {
 add_action( 'admin_enqueue_scripts', 'admin_enqueue' );
 
 
-/*
- * Call to Admin Menus
- */
-// require_once( PURPLEBUG_BASE . '/admin/includes/register-admin-menus.php' );
+/*Call to registration*/
 require_once( PURPLEBUG_BASE . '/admin/includes/registration.php' );
 
-/*
- * Call to Page Meta boxes
- */
+/*Call to Page Meta boxes*/
 require_once( PURPLEBUG_BASE . '/admin/includes/register-metaboxes.php' );
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="styled-button"';
+}
+   
+function the_breadcrumb() {
+    $separator = ' >> ';
+    global $post;
+    if (!is_front_page()) {
+        echo '<div class="breadcrumbs">';
+        echo '<a href="';
+        echo get_option('home');
+        echo '">';
+        bloginfo('name');
+        echo '</a>' . $separator;
+        if (is_single()) {
+            echo $separator;
+            echo '<div class="active-page">'.the_title();
+        }
+        if (is_page()) {
+            echo '<div class="active-page">'.the_title();
+        }
+        if (is_home()){
+            $page_for_posts_id = get_option('page_for_posts');
+            if ( $page_for_posts_id ) { 
+                $post = get_post($page_for_posts_id);
+                setup_postdata($post);
+                echo '<div class="active-page">'.the_title();
+                rewind_posts();
+            }
+        }
+        echo '</div>';
+    }
+}
+?>

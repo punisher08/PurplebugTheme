@@ -9,7 +9,14 @@ $carousel_image2 = get_post_meta($page_id, 'aw_custom_image2', true);
 $carousel_image3 = get_post_meta($page_id, 'aw_custom_image3', true);
 $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
 ?>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="contianer">
+        <h2><?=the_breadcrumb();?></h2>
+    </div>
+    <div class="contianer">
+        <h2 class="the-title"><?=the_title();?></h2>
+    </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
         <img src="<?php echo $carousel_image1;?>">
@@ -37,7 +44,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     <img class="single-page-ida2 my-3" src="<?php echo $carousel_image4;?>">
                     <button class="category-btn">UNCATEGORIZED</button>
                 </div>
-                <hr class="divider-md">
+                <hr class="divider">
                 <?php
                     if ( have_posts() ) :
                     while ( have_posts() ) : the_post(); ?>
@@ -55,7 +62,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card">
                         <div class="card-title pt-2  blue" mt-4>Recent Posts</div>
-                        <hr class="blue-divider">
+                        <hr class="divider">
                         <?php
                         // $posts = wp_get_recent_posts(); 
                         $posts = wp_get_recent_posts(); 
@@ -68,7 +75,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card mt-2">
                         <div class="card-title pt-2 blue">Recent Comments</div>
-                        <hr class="blue-divider">
+                        <hr class="divider">
                         <?php
                         // $posts = wp_get_recent_posts(); 
                         $comments = get_comments(); 
@@ -88,7 +95,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-title pt-2 red">Archives</div>
-                        <hr class="red-divider">
+                        <hr class="divider">
                             <?php
                            $args = array(
                             'post_type'    => 'page',
@@ -100,7 +107,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card mt-2">
                         <div class="card-title pt-2 red">Categories</div>
-                        <hr class="red-divider">
+                        <hr class="divider">
                             <?php
                                 $categories = get_categories(); 
                                 // print_r($categories);
@@ -113,7 +120,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card mt-2">
                         <div class="card-title pt-2 red">Meta</div>
-                        <hr class="red-divider">
+                        <hr class="divider">
                         <?php 
                             echo '<ul class="custom_categories_widget">';
                             echo '<li><i class="fa fa-angle-double-right" aria-hidden="true"></i><p class="px-3"><a href="">COMMENTS FEED</a></p></li>';  

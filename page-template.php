@@ -34,7 +34,7 @@ $carousel_image3 = get_post_meta($page_id, 'aw_custom_image3', true);
     <div class="container">
     <div class="page-element-id-a1">
             <h3>Privacy Policy</h3>
-            <hr class="divider-md">
+            <hr class="divider-md divider">
             <div class="dynnamic-page-content-a1">
                 <h3 class="sb-text">Who are we?</h3>
                 <p><span><strong>Suggested text: </strong></span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, fugiat.</p>

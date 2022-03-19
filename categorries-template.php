@@ -34,38 +34,9 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-12 card">
-            <?php 
-                $paged = get_query_var('paged')? get_query_var('paged') : 1;
-                $args = [
-                    'post_type' => 'post',
-                    'posts_per_page' => 10, 
-                    'paged' => $paged,
-                ];
-                $wp_query = new WP_Query($args);
-
-                while ( have_posts() ) : the_post(); 
-                $post_id = get_the_ID();
-                $featured_image = get_post_meta($post_id,'aw_custom_image5',true);
+                <?php
+                require_once( PURPLEBUG_BASE . '/paginate_post.php' );
                 ?>
-                    <div class="img-content mt-3">
-                        <h3 class="card-title"><?=$post->post_title;?></h3>
-                        <hr class="divider-md">
-                        <img class="single-page-ida2 my-3" src="<?php echo $featured_image;?>">
-                        <?php
-                        $category_detail=get_the_category($post_id);//$post->ID
-                        foreach($category_detail as $cd){
-                        echo '<button class="category-btn mx-1">'.$cd->cat_name.'</button>';
-                        }
-                        ?>
-                        
-                    </div>
-                <?php endwhile; ?>
-
-                <!-- then the pagination links -->
-                <?php next_posts_link( '&larr; Older posts', $wp_query ->max_num_pages); ?>
-                <?php previous_posts_link( 'Newer posts &rarr;' ); ?>
-                
-                
             </div>
             <div class="col-md-6 col-sm-12 d-flex cat-content">
                 <div class="col-md-6 col-sm-12">
@@ -74,7 +45,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card">
                         <div class="card-title pt-2  blue" mt-4>Recent Posts</div>
-                        <hr class="blue-divider">
+                        <hr class="divider">
                         <?php
                         // $posts = wp_get_recent_posts(); 
                         $posts = wp_get_recent_posts(); 
@@ -87,7 +58,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card mt-2">
                         <div class="card-title pt-2 blue">Recent Comments</div>
-                        <hr class="blue-divider">
+                        <hr class="divider">
                         <?php
                         // $posts = wp_get_recent_posts(); 
                         $comments = get_comments(); 
@@ -107,7 +78,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                 <div class="col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-title pt-2 red">Archives</div>
-                        <hr class="red-divider">
+                        <hr class="divider">
                             <?php
                            $args = array(
                             'post_type'    => 'page',
@@ -119,7 +90,7 @@ $carousel_image4 = get_post_meta($page_id, 'aw_custom_image4', true);
                     </div>
                     <div class="card mt-2">
                         <div class="card-title pt-2 red">Categories</div>
-                        <hr class="red-divider">
+                        <hr class="divider">
                             <?php
                                 $categories = get_categories(); 
                                 // print_r($categories);
